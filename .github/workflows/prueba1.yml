@@ -1,0 +1,17 @@
+name: MI-Primer-Workflow
+
+on:
+  push:
+    branches:
+      - master
+ 
+      
+jobs:
+  check-html:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Mostrar archivos HTML
+        run: ls *.html
