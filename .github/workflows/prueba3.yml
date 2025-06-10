@@ -21,4 +21,4 @@ jobs:
         uses: actions/checkout@v3
       - name: Imprimiendo variables
         run: |
-          echo "Hola $Autor , $Fecha , el archivo se encuentra en $Carpeta/$Archivo, la Clave API es:{} "
+          echo "Hola $Autor , $Fecha , el archivo se encuentra en $Carpeta/$Archivo, la Clave API es:{API_KEY} "
