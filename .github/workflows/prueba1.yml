@@ -1,9 +1,7 @@
 name: MI-Primer-Workflow
 
-on:
-  push:
-    branches:
-      - master
+on: {}
+ 
  
       
 jobs:

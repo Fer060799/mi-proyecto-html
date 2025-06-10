@@ -1,0 +1,24 @@
+name: Probando variables de entorno
+
+on:
+  push:
+    branches: [master]
+
+env:
+  Variable1: "Fernando"
+
+jobs:
+  creando-variables:
+    runs-on: ubuntu-latest
+    env: #Declarando mis variables de entorno que voy a reutilizar muchas veces.
+      Autor: "Fernando"
+      Fecha: "hoy es Lunes"
+      Carpeta: "carpeta1"
+      Archivo: "prueba1.html"
+      API_KEY: ${{ secrets.API_KEY }}
+    steps:
+      - name: clonando-repo
+        uses: actions/checkout@v3
+      - name: Imprimiendo variables
+        run: |
+          echo "Hola $Autor , $Fecha , el archivo se encuentra en $Carpeta/$Archivo, la Clave API es: $API_KEY "
