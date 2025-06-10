@@ -7,11 +7,11 @@ on:
  
       
 jobs:
-  check-html:
-    runs-on: ubuntu-latest
+  check-html: #Nombre del trabajo, un workflow puede tener 1 o muchos trabajos.
+    runs-on: ubuntu-latest  #El trabajo se va a ejecutar en una MV
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3  #1er paso - clona mi repo de github a la MV
 
-      - name: Mostrar archivos HTML
+      - name: Mostrar archivos HTML  #2do paso - Lista el HTML.
         run: ls *.html
